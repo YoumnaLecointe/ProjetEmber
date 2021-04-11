@@ -1,0 +1,26 @@
+{{page-title "Index"}}
+<h1>Connexion</h1>
+<form {{action "connect" @model on="submit"}}>
+
+  <div class="co">
+    <Input type="email" @value={{@model.email}} placeholder="Email"/>
+    <Input type="password" @value={{@model.password}} placeholder="Mot de passe"/>
+
+  <button class = "ui button" type="submit"> Valider </button>
+  </div>
+</form>
+
+<style>
+  .co{
+    background: black;
+    height: 60px;
+    width: 500px;
+    margin-top: 30px;
+    text-align: center;
+
+  }
+  .co input{
+    margin-top: 18px;
+  }
+</style>
+{{outlet}}
