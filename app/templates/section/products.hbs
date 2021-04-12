@@ -1,9 +1,13 @@
 {{page-title "Products"}}
-<h2>Produits</h2>
+<legend>Nos produits</legend>
 <LinkTo @route="section.addproduct"><button> Ajouter produit </button></LinkTo>
 {{outlet}}
 <table>
   <thead>
+  <tr>
+    <th>Nom</th><th>Prix</th><th>Promotion</th>
+  </tr>
+  </thead>
   {{#each @model.section.products as |product|}}
     <tbody>
     <tr>
