@@ -1,1 +1,15 @@
 {{page-title "Products"}}
+<h2>Produits</h2>
+<LinkTo @route="section.addproduct"><button> Ajouter produit </button></LinkTo>
+{{outlet}}
+<table>
+  <thead>
+  {{#each @model.section.products as |product|}}
+    <tbody>
+    <tr>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.promotion}}</td>
+    </tr></tbody>
+  {{/each}}
+</table>
