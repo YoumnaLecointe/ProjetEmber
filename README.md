@@ -1,7 +1,7 @@
 # projetember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Lecointe Youmna TD2.2
+Projet non terminé.
 
 ## Prerequisites
 
