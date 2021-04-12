@@ -1,3 +1,11 @@
 {{page-title "Edit"}}
-
+<legend>Editer une section</legend>
+<p>Name</p><input type="text" name="first-name" placeholder="Section">
+<div class="menu">
+  {{#each @model as |section|}}
+    <div data-value="{{section.id}}" class="item">
+      {{section.name}}
+    </div>
+  {{/each}}
+</div>
 {{outlet}}
