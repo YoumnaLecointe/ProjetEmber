@@ -1,3 +1,42 @@
+<style>
+  ol {counter-reset: repas;}
+  li {
+    list-style-type: none;
+    counter-increment: repas;
+    margin-bottom: 10px;
+  }
+  li:before {
+    content: counter(repas);
+    padding: 0 20px 6px;
+    margin-right: 8px;
+    vertical-align: top;
+    background: #678;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: white;
+  }
+</style>
 {{page-title "Board"}}
+<legend> Tableau de bord </legend>
+<div>
+  <span>{{@model.employee.email}}</span>
+    <LinkTo @route="logout" class="button">Se déconnecter</LinkTo>
+</div>
 
+<legend> Commandes </legend>
+<ol>
+<ul>
+  {{#each @model.orders as |order|}}
+    <li>
+      {{moment-format order.dateCreation "LLLL"}} <span>{{order.orderdetails.length}}</span>
+    </li>
+  {{/each}}
+  <LinkTo @route="section">
+    <button class="button"> Gestion du store </button>
+  </LinkTo>
+</ul>
+</ol>
 {{outlet}}
+
