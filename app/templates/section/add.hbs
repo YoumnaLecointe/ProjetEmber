@@ -1,10 +1,24 @@
 {{page-title "Add"}}
 <br>
-<div class="ui input ">
-    <Input @value={{@model.name}} placeholder="Entrez le nom de la section"/>
-    <Input @value={{@model.description}} placeholder="Entrez la description"/>
+<div class="co">
+    <Input @value={{@model.name}} placeholder= "Nom"/>
+    <Input @value={{@model.description}} placeholder= "Description"/>
 </div>
-  <br>
-  <button {{action "save" @model}} class="btn btn-primary">Enregistrer </button>
-  <LinkTo @route="section" class="btn">Annuler</LinkTo>
+  <button {{action "save" @model}} class="button">Enregistrer </button>
+  <LinkTo @route="section" class="button">Annuler</LinkTo>
 {{outlet}}
+
+<style>
+  .co{
+    background: black;
+    height: 60px;
+    width: 500px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  .co input{
+    margin-top: 20px;
+  }
+</style>
