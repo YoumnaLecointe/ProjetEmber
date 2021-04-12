@@ -1,3 +1,12 @@
 {{page-title "AddProduct"}}
-
+<legend>Section</legend>
+<Input type="text" @value={{@model.product.name}} placeholder="name"/>
+<Input type="text" @value={{@model.product.price}} placeholder="price"/>
+<Input type="text"@value={{@model.product.promotion}} placeholder="promotion"/>
+<Input type="text"@value={{@model.product.stock}} placeholder="stock"/>
+</div>
+<br>
+<button {{action "save" @model.product}} class="ui black button"> Enregistrer</button>
+<LinkTo @route="section"><button>Annuler</button></LinkTo>
+</div>
 {{outlet}}
