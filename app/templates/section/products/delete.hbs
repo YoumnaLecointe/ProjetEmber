@@ -1,2 +1,13 @@
 {{page-title "Delete"}}
+<p>Modifier le produit {{@model.name}}</p>
+    <form{{action "update" @model on='submit'}}>
+      <div class="ui one column wide">
+        <Input class="ui input marginBotLL" type="text" placeholder="Nom du product" required @value={{@model.name}}/>
+        <Input class="ui input marginBotLL" type="number" placeholder="Prix" required @value={{@model.price}}/>
+        <Input class="ui input marginBotLL" type="number" placeholder="Promotion" @value={{@model.promotion}}/>
+        <Input class="ui input marginBotLL" type="number" placeholder="Stock" @value={{@model.stock}}/>
+      </div>
+        <button class="button" type="submit" >Update</button>
+      </div>
+    </form>
 {{outlet}}
