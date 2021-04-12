@@ -1,1 +1,18 @@
-{{page-title "Board"}}
+{{page-title "Sections"}}
+<legend>Sections</legend>
+<table>
+  <tbody>
+  {{#each @model.sections as |section|}}
+    <tr>
+      <td class="ui collapsing">
+        <LinkTo class="ui mini icon red button" @route="section.delete" @model={{section.id}}>Supprimer</LinkTo>
+        <LinkTo class="ui mini icon blue button" @route="section.products" @model={{section.id}}>Produits</LinkTo>
+      </td>
+      <td>{{section.name}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+<LinkTo @route="section.add"><button> Ajouter une section </button></LinkTo>
+<LinkTo @route="board"><button> Retour </button></LinkTo>
+{{outlet}}
